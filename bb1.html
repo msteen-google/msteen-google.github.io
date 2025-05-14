@@ -8,6 +8,16 @@
       gtag('js', new Date());
     
       gtag('config', 'GT-55XGW579');
+      gtag("event", "view_item", {
+        // Event-level parameters
+        transactionId: "unique-123",
+        items: [
+          {
+            test: "aaaa",
+            settings: "1"
+          }
+        ]
+      });
     </script>
     <title>BB1</title>
   </head>
