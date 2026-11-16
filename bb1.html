@@ -1,24 +1,38 @@
 <html>
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://gtm-ctfe-preprod.corp.google.com/gtag/js?id=GT-NFXCK2W2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'GT-55XGW579');
-      gtag("event", "view_item", {
-        // Event-level parameters
-        transactionId: "unique-123",
-        items: [
-          {
-            test: "aaaa",
-            settings: "1"
-          }
-        ]
-      });
-    </script>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11182311694"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11182311694');
+</script>
+
+<!-- Event snippet for LMR Purchase Conversion 1 conversion page -->
+<script>
+  const conversionConfig = {
+    'send_to': 'AW-11182311694/Bat_CP6Q5bkdEI6SktQp',
+    'value': 1.0,
+    'currency': 'TWD'
+  };
+
+    const date = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+    const timestamp = new Date().toISOString().slice(-24).replace(/\D/g,'').slice(0, 14);
+    gtag('event', 'conversion', { 
+      ...conversionConfig, 
+      'transaction_id': `aaa-${date}`
+    });
+
+  for (let i = 1; i <= 10; i++) {
+    gtag('event', 'conversion', { 
+      ...conversionConfig, 
+      'transaction_id': `online${i}-${timestamp}` 
+    });
+  }
+</script>
+
     <title>BB1</title>
   </head>
   <body>
